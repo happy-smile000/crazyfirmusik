@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+h1 {
+  font-size: 2em;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+button {
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#visualizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.lyrics {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #ffccff;
+  text-shadow: 0 0 10px #ff00cc;
+  font-weight: 500;
+  transition: opacity 0.5s ease;
+}
+
+#lyricsText {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
